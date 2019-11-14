@@ -69,7 +69,7 @@ var backPack = {
 
 var item = 'firstPocket';
 
-backPack['firstPocket'] = 'chapstick',
+backPack['firstPocket'] = 'chapstick';
 
 backPack.color = 'black'
 
@@ -119,21 +119,26 @@ user2.email = 'bryan.smith@devmounta.in'
 */
 
 var methodCollection = {
-  
-}
+
+};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
-//Code Here
+methodCollection.alertHello = function(){
+  alert('hello')
+};
 
+methodCollection.logHello = function(){
+  console.log('hello')
+  ;}
 /*
   Now call your alertHello and logHello methods.
 */
-
-//Code Here
+alertHello();
+logHello();
 
 ////////// PROBLEM 6 //////////
 
@@ -142,7 +147,10 @@ var methodCollection = {
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(name, birthday, ssn){
+  const obj={name, birthday, ssn}
+  return obj
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -151,4 +159,11 @@ var methodCollection = {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expDate, securityCode){
+  var creditCard = {
+    cardNumber : cardNumber,
+    expDate : expDate,
+    securityCode : securityCode
+  }
+  return creditCard;
+ }
